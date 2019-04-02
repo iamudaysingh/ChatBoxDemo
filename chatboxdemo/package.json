@@ -1,0 +1,39 @@
+{
+  "name": "chatboxdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext jsx",
+    "lint:fix": "eslint src --ext jsx --fix",
+    "commit": "npx git-cz",
+    "test:c": "test --coverage",
+    "client": "npm start --prefix client",
+    "chat": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-boost": "^0.3.1",
+    "apollo-client-preset": "^1.0.8",
+    "apollo-link-ws": "^1.0.17",
+    "apollo-server": "^2.4.8",
+    "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
+    "cores": "^0.8.5",
+    "create-react-app": "^2.1.8",
+    "emoji-mart": "^2.10.0",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "react-apollo": "^2.5.2",
+    "subscriptions-transport-ws": "^0.9.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "eslint-config-airbnb": "^17.1.0",
+    "husky": "^1.3.1"
+  }
+}
